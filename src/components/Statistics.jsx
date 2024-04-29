@@ -3,7 +3,7 @@ import styles from './stats.css';
 const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Upload stats</h2>
+      <input className={styles.title}>Upload stats</input>
 
       <ul className={styles.list}>
         <li className={styles.point}>

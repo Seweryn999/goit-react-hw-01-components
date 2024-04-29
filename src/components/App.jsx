@@ -1,12 +1,8 @@
 import React from 'react';
-// Components
 import Profile from './Profile';
 import Statistics from './Statistics';
-import FriendList from './FriendsList';
-// Data
 import userData from './user.json';
 import stats from './data.json';
-import friends from './friends.json';
 
 const App = () => {
   return (
@@ -22,11 +18,6 @@ const App = () => {
         id={stats.id}
         label={stats.label}
         percentage={stats.percentage}
-      />
-      <FriendList
-        avatar={friends.avatar}
-        label={friends.label}
-        percentage={friends.percentage}
       />
     </div>
   );

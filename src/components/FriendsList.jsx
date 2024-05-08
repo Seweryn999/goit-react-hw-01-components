@@ -4,6 +4,8 @@ import FriendListItem from './FriendsListItem';
 import styles from './FriendsList.module.css';
 
 const FriendList = ({ friends }) => {
+  if (!Array.isArray(friends)) return null;
+
   return (
     <ul className={styles.friendList}>
       {friends.map(friend => (
@@ -26,7 +28,11 @@ FriendList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
     })
-  ).isRequired,
+  ),
+};
+
+FriendList.defaultProps = {
+  friends: [],
 };
 
 export default FriendList;

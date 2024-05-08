@@ -3,10 +3,12 @@ import React from 'react';
 import Profile from './Profile';
 import Statistics from './Statistics';
 import FriendList from './FriendsList';
+import TransactionHistory from './TransactionHistory';
 // Data
 import userData from './user.json';
 import stats from './data.json';
 import friends from './friends.json';
+import items from './transactions';
 
 const App = () => {
   return (
@@ -18,15 +20,20 @@ const App = () => {
         avatar={userData.avatar}
         stats={userData.stats}
       />
+
       <Statistics
         id={stats.id}
         label={stats.label}
         percentage={stats.percentage}
       />
-      <FriendList
-        avatar={friends.avatar}
-        label={friends.label}
-        percentage={friends.percentage}
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory
+        items={items.map(item => ({
+          ...item,
+          amount: parseFloat(item.amount),
+        }))}
       />
     </div>
   );

@@ -1,5 +1,12 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .item {
   display: flex;
+
   align-items: center;
   padding: 10px;
   border: 1px solid #ccc;
@@ -9,13 +16,9 @@
   background-color: #fff;
 }
 
-.centered {
-  justify-content: center;
-}
 .statusWrapper {
   display: flex;
   align-items: center;
-  margin-right: 10px;
 }
 
 .status {
@@ -37,13 +40,11 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  margin-right: 10px;
 }
 
 .name {
   font-size: 16px;
   font-weight: bold;
-  /* margin-right: auto; */
 }
 
 .statusText {

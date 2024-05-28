@@ -1,9 +1,9 @@
-import styles from './stats.css';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.section}>
-      <label className={styles.title}>{title}</label>
+      <label className={styles.title}>UPLOAD STATS{title}</label>
 
       <ul className={styles.list}>
         <li className={styles.point}>

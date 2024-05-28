@@ -1,16 +1,17 @@
 .item {
   display: flex;
-  margin-left: 31%;
-
   align-items: center;
   padding: 10px;
   border: 1px solid #ccc;
-  width: 400px;
+  width: 35%;
   border-radius: 8px;
   margin-bottom: 10px;
   background-color: #fff;
 }
 
+.centered {
+  justify-content: center;
+}
 .statusWrapper {
   display: flex;
   align-items: center;
@@ -42,6 +43,7 @@
 .name {
   font-size: 16px;
   font-weight: bold;
+  /* margin-right: auto; */
 }
 
 .statusText {

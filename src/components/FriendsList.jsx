@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendsListItem';
+import styles from './FriendsList';
 
 const FriendList = ({ friends }) => {
   if (!Array.isArray(friends)) return null;
 
   return (
-    <ul>
-      {friends.map(friend => (
-        <FriendListItem
-          key={friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
-      ))}
-    </ul>
+    <div className={styles.friendListContainer}>
+      <ul>
+        {friends.map(friend => (
+          <FriendListItem
+            key={friend.id}
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 
